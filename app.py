@@ -8,7 +8,7 @@ import falcon
 import json
 
 
-from client import *
+from db_client import *
 
 class NoteResource:
     
@@ -43,13 +43,14 @@ class NoteResource:
                 'Could not decode the request body. The '
                 'JSON was incorrect.')
 
-
-        def on_delete(self, req, resp ,id):
+"""
+        def on_delete(self, req, resp):
             """Handles GET requests"""
             # Return all notes
             note_cursor = r.db(PROJECT_DB).table(PROJECT_TABLE).run(db_connection)
             notes = [i for i in note_cursor]
             resp.body = json.dumps({'notes':notes})
- 
+ """
+
 api = falcon.API()
 api.add_route('/notes', NoteResource())
