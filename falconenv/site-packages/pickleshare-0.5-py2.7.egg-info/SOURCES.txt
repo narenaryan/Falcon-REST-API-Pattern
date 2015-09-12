@@ -1,0 +1,8 @@
+pickleshare.py
+setup.cfg
+setup.py
+pickleshare.egg-info/PKG-INFO
+pickleshare.egg-info/SOURCES.txt
+pickleshare.egg-info/dependency_links.txt
+pickleshare.egg-info/requires.txt
+pickleshare.egg-info/top_level.txt
